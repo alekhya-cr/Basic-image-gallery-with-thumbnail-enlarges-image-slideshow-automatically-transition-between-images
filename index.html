@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <header>
+ 
+    <h1>
+   Photo Gallery-BEAUTY OF MY STATE <p>Andhra Pradesh, a destination divine! </p>
+   </h1>
+   <hr/>
+   
+   </header>
+    <div class="container">
+        <br>
+    
+        <div class="img-box1">
+            <a href="images/NELLORE.jpg">
+                <img src="images/NELLORE.jpg" width="200px" height="200px">
+                <br>
+                <h5>Nellore</h5>
+            </a>
+        </div>
+
+        <div class="img-box2">    
+            <a href="images/VIJAYAWADA.jpg">
+                <img src="images/VIJAYAWADA.jpg" width="200px" height="200px">
+                <br>
+                <h5>Vijayawada</h5>
+            </a>
+        </div>
+        
+        <div class="img-box3">
+            <a href="images/tirupati.webp">
+                <img src="images/tirupati.webp" width="200px" height="200px">
+                <br>
+                <h5>Tirupati</h5>
+            </a>
+        </div>
+        
+        <div class="img-box4">
+            <a href="images/AMARA.webp">
+                <img src="images/AMARA.webp" width="200px" height="200px">
+                <br>
+                <h5>Amaravathi</h5>
+            </a>
+        </div>
+        
+        <div class="img-box5">
+            <a href="images/sri-penusila-lakshmi-narasimha-swamy-temple.jpg">
+                <img src="images/sri-penusila-lakshmi-narasimha-swamy-temple.jpg" width="200px" height="200px">
+                <br>
+                <h5>Penchalakona</h5>
+            </a>
+        </div>
+        
+        <div class="img-box6">
+            <a href="images/VIZAGGG.jpg">
+                <img src="images/VIZAGGG.jpg" width="200px" height="200px">
+                <br>
+                <h5>Vizag</h5>
+            </a>
+        </div>
+
+    </div>
+    <br>
+    
+             
+            
+
+      
+<h2 style="text-align:center; margin-top: 20px; font-size: 2.5rem;">Image Slideshow</h2>
+
+<div class="slideshow-container">
+
+    <div class="slides fade">
+        <img src="images/ARAKU-VALLEY.jpg" alt="araku">
+    </div>
+
+    <div class="slides fade">
+        <img src="images/srisailam-hero.jpg" alt="srisailam">
+    </div>
+
+    <div class="slides fade">
+        <img src="images/grand-canyon-of-india.jpg" alt="gandikota">
+    </div>
+    
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    prev.addEventListener('click', () => changeSlide(-1));
+    next.addEventListener('click', () => changeSlide(1));
+
+    function changeSlide(n) {
+        slideIndex += n - 1;
+        showSlides();
+    }
+</script>
+<header>
+ 
+  <h1>Explore Andhra Pradesh!
+
+ <p>Thank you </p>
+ </h1>
+ <hr/>
+ 
+ </header>
+
+</body>
+</html>
